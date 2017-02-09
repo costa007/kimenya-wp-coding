@@ -4,7 +4,7 @@ p {
 }
 /*Body*/
 .site-inner {
-	width: 100%;
+	max-width: 100%;
 }
 .site-content {
 	padding: 0;
@@ -25,7 +25,7 @@ header#masthead {
 .page-id-18 img.custom-logo,
 .page-id-92 img.custom-logo,
 .page-id-14 img.custom-logo {
-	width: 500px;
+	width: 100%;
 }
 .primary-menu li {
 	text-align: center;
@@ -41,9 +41,9 @@ header#masthead {
 .page-id-18 .site-branding,
 .page-id-92 .site-branding,
 .page-id-14 .site-branding {
-	width: 274px;
+	width: 220px;
 	padding: 17px;
-	margin: 0 !important;
+	margin: 0 auto;
 }
 
 /*  ---TOP PAGE---  */
@@ -53,7 +53,7 @@ header#masthead {
 	z-index: 1;
 	width: 100%;
 }
-.page-id-12 .kimenya-top-contact {
+.page-id-12 .header-contact-info {
 	position: absolute;
 	top: 108px;
 	right: 178px;
@@ -74,20 +74,39 @@ div#site-header-menu {
 	width: 60%;
 	margin: 9px auto;
 }
+.page-id-16 div#site-header-menu,
+.page-id-18 div#site-header-menu,
+.page-id-92 div#site-header-menu,
+.page-id-14 div#site-header-menu {
+	width: 50%;
+}
+.page-id-12 .header-contact-info {
+	border: none;
+	padding: 0;
+}
+.header-contact-info {
+	border-left: 2px solid #fff;
+	padding-left: 1.5%;
+}
 header.entry-header {
 	display: none;
 }
 .main-navigation a {
-	padding: 0 41px;
+	padding: 10px 41px;
 }
-
+.header-contact-info {
+	line-height: normal;
+}
+.header-contact-info > p:nth-child(2) {
+	font-size: 1.8em;
+}
 
 /*YT Link*/
 .kimenya-youtube {
-	width: 270px;
+	width: 22%;
 	position: absolute;
-	top: 410px;
-	right: 132px;
+	top: 10.4%;
+	right: 8%;
 }
 .kimenya-youtube a img {
 	width: 100%;
@@ -96,31 +115,43 @@ header.entry-header {
 /*Top News*/
 .kimenya-news {
 	position: relative;
-	width: 1070px;
+	width: 79%;
 	margin: 0 auto;
+	padding-top: 5%;
 }
 .kimenya-news-header {
 	position: absolute;
 	z-index: 0;
 	top: 21%;
-	left: 31%;
-	width: 404px;
+	left: 29%;
+	width: 42%;
 }
 .kimenya-news-header img {
 	width: 100%;
 }
 .kimenya-check-box {
 	margin: 0;
-	position: relative;
+	float: right;
 }
 .kimenya-news-box {
 	margin-right: 3.5%;
-	position: relative;
+	float: left;
+}
+.kimenya-news:after {
+	content: ".";
+	visibility: hidden;
+	clear: both;
+	display: block;
 }
 .kimenya-news-box, .kimenya-check-box {
 	width: 48%;
-	display: inline-block;
-	vertical-align: bottom;
+	position: relative;
+}
+.kimenya-fb {
+	position: absolute;
+	bottom: -4px;
+	margin: 5%;
+	width: 91%;
 }
 .kimenya-news-box img, .kimenya-check-box img {
 	width: 100%;
@@ -154,14 +185,20 @@ header.entry-header {
 }
 .kimenya-contact-button {
 	width: 49%;
-	display: inline-block;
-	margin-right: 1.5%; 
+	float: left;
 }
 .kimenya-contact-button:last-child {
-	margin: 0;
+	width: 49%;
+	float: right;
 }
 .site-main {
 	margin-bottom: 15px !important
+}
+.kimenya-contact-info:after {
+	content: ".";
+	visibility: hidden;
+	clear: both;
+	display: block;
 }
 
 /* map */
@@ -206,6 +243,21 @@ header.entry-header {
 .site-info {
 	text-align: center;
 	margin: 10px auto;
+}
+.header-contact-info-bottom {
+	text-align: center;
+	line-height: normal;
+	margin-bottom: 2%;
+}
+.header-contact-info-bottom > p:nth-child(2) {
+	font-size: 1.8em;
+}
+.kimenya-brand-bottom {
+	width: 18%;
+	margin: 2% auto;
+}
+.kimenya-brand-bottom a img {
+	width: 100%;
 }
 
 /*Access*/
@@ -296,7 +348,7 @@ header.entry-header {
 	margin-bottom: 5%;
 }
 div:nth-child(2) > div.menu-headline {
-    position: relative;
+	position: relative;
 }
 .menu-headline-seal {
 	position: absolute;
@@ -314,3 +366,180 @@ div:nth-child(2) > div.menu-headline {
 	width: 307.5px !important;
 }
 
+/*Responsive*/
+@media screen and (max-width: 1000px) {
+	div#site-header-menu {
+		width: 87%;
+	}
+}
+@media screen and (max-width: 909px) {
+	.entry-content {
+		margin: 0;
+	}
+	.kimenya-news {
+		width: 100%;
+	}
+	.kimenya-news-header {
+		position: static;
+		margin: 0 auto;
+	}
+	.kimenya-news-box, .kimenya-check-box {
+		display: block;
+		margin: 0 auto;
+	}
+	.page-id-12 .site-branding {
+		width: 220px;
+		position: static;
+		padding: 17px;
+	}
+	.kimenya-youtube {
+		top: 5.8%;
+		right: 7%;
+	}
+	.page-id-12 img.custom-logo {
+		width: 100%;
+	}
+	.page-id-12 .header-contact-info {
+		top: 11px;
+		right: 0;
+		text-align: right;
+		padding: 10px;
+		font-size: 13px;
+	}
+	.page-id-12 header#masthead,
+	.page-id-12 .site-branding {
+		position: static;
+	}
+	.page-id-12 li#menu-item-22 {
+		margin-right: 0;
+	}
+	.page-id-12 li#menu-item-21 {
+		margin-left: 0;
+	}
+	.header-contact-info,
+	.site-footer .main-navigation {
+		display: none;
+	}
+	.kimenya-strain {
+		background-size: 170% 100%;
+	}
+	.site-header-main {
+		padding: 0 15px;
+	}
+	.page-id-16 header#masthead,
+	.page-id-18 header#masthead,
+	.page-id-92 header#masthead,
+	.page-id-14 header#masthead,
+	.page-id-12 header#masthead {
+		width: 100%;
+	}
+	.page-id-16 .site-branding,
+	.page-id-18 .site-branding,
+	.page-id-92 .site-branding,
+	.page-id-14 .site-branding,
+	.page-id-12 .site-branding {
+		margin: 0 auto;
+	}
+	.kimenya-top p {
+		padding: 3%;
+	}
+	.kimenya-contact-info {
+		width: 79%;
+	}
+	.kimenya-contact-button {
+		width: 48%;
+	}
+	.kimenya-news-box,
+	.kimenya-check-box {
+		float: none;
+		width: 80%;
+		margin-bottom: 5%;
+	}
+	.menu-details {
+		width: 70%;
+	}
+	.menu-one-column-detail {
+		width: 70%;
+	}
+}
+@media screen and (max-width: 441px) {
+	.kimenya-strain {
+		background-size: 280% 100%;
+	}
+	.kimenya-strain-right {
+		float: none;
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.kimenya-youtube {
+		width: 60%;
+		margin-bottom: 8%;
+	}
+	.kimenya-top p {
+		padding: 5%;
+		font-size: 0.9em;
+		text-align: left !important;
+	}
+	.kimenya-news-header,
+	.kimenya-news-box,
+	.kimenya-check-box {
+		width: 90%;
+	}
+	.kimenya-strain {
+		background-size: 352% 100%;
+		margin: 0;
+	}
+	.kimenya-youtube {
+		position: static;
+		margin: 0 auto;
+	}
+	.kimenya-button1, .kimenya-button2 {
+		width: 100%;
+	}
+	.kimenya-contact-info {
+		width: 95%;
+	}
+	.kimenya-contact-button {
+		display: block;
+		width: 100%;
+		margin-bottom: 3%;
+	}
+	.kimenya-contact-button:last-child {
+		width: 100%;
+	}
+	.kimenya-brand-bottom {
+		width: 55%;
+		margin: 7% auto;
+	}
+	.detail, .detail:nth-child(1),
+	.detail:nth-child(2),
+	.detail:last-child,
+	.menu-one-column-detail {
+		font-size: 18px;
+		float: none;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+	}
+	.menu-one-column-detail {
+		margin-bottom: 18%;
+	}
+	.menu-one-column-detail .one-column-detail p:first-child,
+	.menu-one-column-detail .one-column-detail p:last-child {
+		float: none;
+	}
+	.menu-details,
+	.menu-one-column-detail {
+		width: 82%;
+	}
+	.menu .main-header {
+		padding: 0 4%;
+	}
+	.menu-headline-seal {
+		position: static;
+		margin: 0 auto 5%;
+		width: 33%;
+	}
+}

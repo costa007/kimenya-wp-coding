@@ -426,3 +426,49 @@ function kimenya_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'kimenya_widget_tag_cloud_args' );
+
+
+
+// Custom settings
+function custom_settings_add_menu() {
+  add_menu_page( 'Custom Settings', 'Custom Settings', 'manage_options', 'custom-settings', 'custom_settings_page', null, 99 );
+}
+add_action( 'admin_menu', 'custom_settings_add_menu' );
+
+// Create Custom Global Settings
+function custom_settings_page() { ?>
+	<div class="wrap">
+	<h1>Custom Settings</h1>
+		<form method="post" action="options.php">
+			<?php
+				settings_fields( 'section' );
+				do_settings_sections( 'theme-options' );
+				submit_button(); 
+			?>
+		</form>
+	</div>
+<?php }
+
+function setting_address() { ?>
+	<input type="text" name="address" id="address" value="<?php echo get_option( 'address' ); ?>" />
+<?php }
+
+function setting_contact() { ?>
+	<input type="text" name="contact" id="contact" value="<?php echo get_option( 'contact' ); ?>" />
+<?php }
+
+function setting_workschedule() { ?>
+	<input type="text" name="workschedule" id="workschedule" value="<?php echo get_option( 'workschedule' ); ?>" />
+<?php }
+
+function custom_settings_page_setup() {
+	add_settings_section( 'section', 'Access Settings', null, 'theme-options' );
+	add_settings_field( 'address', 'Address', 'setting_address', 'theme-options', 'section' );
+	add_settings_field( 'contact', 'Contact', 'setting_contact', 'theme-options', 'section' );
+	add_settings_field( 'workschedule', 'Schedule', 'setting_workschedule', 'theme-options', 'section' );
+
+	register_setting('section', 'address');
+	register_setting('section', 'contact');
+	register_setting('section', 'workschedule');
+}
+add_action( 'admin_init', 'custom_settings_page_setup' );

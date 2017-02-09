@@ -2134,7 +2134,7 @@ body.search-no-results .page-header {
 }
 
 .content-bottom-widgets {
-	margin: 0 7.6923%;
+	margin: 0;
 }
 
 .content-bottom-widgets .widget-area {
@@ -2835,8 +2835,7 @@ p > video {
 	.image-navigation,
 	.post-navigation,
 	.page-header,
-	.page-content,
-	.content-bottom-widgets {
+	.page-content {
 		margin-right: 23.0769%;
 	}
 
@@ -3318,13 +3317,6 @@ p > video {
 	.textwidget h5,
 	.textwidget h6 {
 		margin-top: 3.2307692308em;
-	}
-
-	.content-bottom-widgets .widget-area:nth-child(1):nth-last-child(2),
-	.content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1) {
-		float: left;
-		margin-right: 7.1428571%;
-		width: 46.42857145%;
 	}
 
 	.content-bottom-widgets .widget-area:nth-child(2):nth-last-child(1):last-of-type {

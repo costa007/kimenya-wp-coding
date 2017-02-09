@@ -73,6 +73,11 @@
 						<?php endif; ?>
 					</div><!-- .site-header-menu -->
 				<?php endif; ?>
+				<div class="header-contact-info">
+					<p><?php echo get_option('address'); ?></p>
+					<p><?php echo get_option('contact'); ?></p>
+					<p><?php echo get_option('workschedule'); ?></p>
+				</div>
 			</div><!-- .site-header-main -->
 
 			<?php if ( get_header_image() ) : ?>
