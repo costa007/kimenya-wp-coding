@@ -19,6 +19,7 @@
 	margin: 0 auto 60px;
 	padding: 0;
 	*zoom: 1;
+	max-width: 100% !important;
 }
 
 .bx-wrapper img {
@@ -31,7 +32,6 @@
 
 .bx-wrapper .bx-viewport {
 	border:  5px solid #0a0a0a;
-	left: -5px;
 	background: #0a0a0a;
 	
 	/*fix other elements on the page moving (on Chrome)*/
@@ -40,6 +40,22 @@
     	-ms-transform: translatez(0);
     	-o-transform: translatez(0);
     	transform: translatez(0);
+}
+.slider {
+	width: 309.5px !important;
+}
+@media screen and (max-width: 909px) {
+	.bx-wrapper .bx-viewport {
+		left: 0;
+	}
+}
+@media screen and (max-width: 441px) {
+	.slider {
+		width: 108.5px !important;
+	}
+	.bx-wrapper .bx-viewport {
+		height: 147px !important;
+	}
 }
 
 .bx-wrapper .bx-pager,

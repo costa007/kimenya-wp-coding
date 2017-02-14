@@ -1,4 +1,9 @@
 /*Default*/
+body,
+header,
+footer {
+	font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
 p {
 	margin: 0;
 }
@@ -11,6 +16,9 @@ p {
 }
 header#masthead {
 	padding: 0;
+}
+.main-navigation ul li a span {
+	text-transform: uppercase;
 }
 #primary {
 	float: none;
@@ -94,8 +102,11 @@ header.entry-header {
 .main-navigation a {
 	padding: 10px 41px;
 }
-.header-contact-info {
+.page-id-12 .header-contact-info {
 	line-height: normal;
+}
+.header-contact-info {
+	line-height: 25px;
 }
 .header-contact-info > p:nth-child(2) {
 	font-size: 1.8em;
@@ -142,6 +153,7 @@ header.entry-header {
 	visibility: hidden;
 	clear: both;
 	display: block;
+	height: 0;
 }
 .kimenya-news-box, .kimenya-check-box {
 	width: 48%;
@@ -246,14 +258,14 @@ header.entry-header {
 }
 .header-contact-info-bottom {
 	text-align: center;
-	line-height: normal;
+	line-height: 29px;
 	margin-bottom: 2%;
 }
 .header-contact-info-bottom > p:nth-child(2) {
 	font-size: 1.8em;
 }
 .kimenya-brand-bottom {
-	width: 18%;
+	width: 16%;
 	margin: 2% auto;
 }
 .kimenya-brand-bottom a img {
@@ -268,6 +280,14 @@ header.entry-header {
 }
 .access-kimenya-contact p:nth-child(2) {
 	font-size: 35px;
+}
+.access-kimenya {
+	width: 16%;
+	margin: 0 auto;
+}
+.access-kimenya-contact {
+	margin-bottom: 2%;
+	line-height: normal;
 }
 
 /*News*/
@@ -290,7 +310,7 @@ header.entry-header {
 
 /* Menu Page */
 .menu-details {
-	width: 37%;
+	width: 42%;
 	margin: 0 auto;
 	margin-bottom: 25px;
 }
@@ -298,15 +318,20 @@ header.entry-header {
 	width: 135px;
 	float: left;
 }
+#post-16 > div > div > div:nth-child(1) > div.menu-box > div:nth-child(3) > div:nth-child(1),
+#post-16 > div > div > div:nth-child(2) > div.menu-box > div > div:nth-child(1) {
+	width: 293px;
+}
 .detail {
 	display: inline-block;
 	margin-right: 20px;
 }
 .detail:nth-child(2) {
 	font-size: 22px;
+	margin-top: 3%;
 }
 .detail:last-child {
-	font-size: 32px;
+	font-size: 44px;
 	margin: 0;
 	float: right;
 }
@@ -316,9 +341,6 @@ header.entry-header {
 	visibility: hidden;
 	display: block;
 	height: 0;
-}
-.menu {
-	margin-bottom: 7%;
 }
 .menu-one-column-detail {
 	width: 44%;
@@ -342,7 +364,7 @@ header.entry-header {
 	height: 0;
 }
 .menu-one-column-detail p:nth-child(2) {
-	font-size: 22px;
+	font-size: 44px;
 }
 .menu-one-column-detail {
 	margin-bottom: 5%;
@@ -367,6 +389,18 @@ div:nth-child(2) > div.menu-headline {
 }
 
 /*Responsive*/
+@media screen and (max-width: 1024px) {
+	div#site-header-menu {
+		width: 77%;
+	}
+	.page-id-12 .header-contact-info {
+		top: 100px;
+		right: 36px;
+	}
+	.kimenya-strain {
+		background-size: 128% 100%;
+	}
+}
 @media screen and (max-width: 1000px) {
 	div#site-header-menu {
 		width: 87%;
@@ -442,6 +476,7 @@ div:nth-child(2) > div.menu-headline {
 	}
 	.kimenya-top p {
 		padding: 3%;
+		text-align: left !important;
 	}
 	.kimenya-contact-info {
 		width: 79%;
@@ -462,20 +497,136 @@ div:nth-child(2) > div.menu-headline {
 		width: 70%;
 	}
 }
-@media screen and (max-width: 441px) {
+
+@media screen and (max-width: 768px) {
+	.kimenya-news-box, .kimenya-check-box {
+		width: 90%;
+	}
+	.kimenya-strain-right {
+		width: 67%;
+	}
+	.kimenya-strain {
+		margin: 0;
+	}
+	.kimenya-strain > div > p:nth-child(2) {
+		margin-right: 14%;
+	}
+	.kimenya-button1, .kimenya-button2 {
+		width: 90%;
+	}
+	.kimenya-contact-info {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.kimenya-top p {
+		padding: 5%;
+		font-size: 0.9em;
+		text-align: left !important;
+	}
+	.kimenya-youtube {
+		width: 45%;
+		position: static;
+		margin: 3% auto;
+	}
+	.kimenya-news-header,
+	.kimenya-news-box,
+	.kimenya-check-box {
+		width: 90%;
+	}
 	.kimenya-strain {
 		background-size: 280% 100%;
+		margin-bottom: : 6%;
 	}
 	.kimenya-strain-right {
 		float: none;
 		width: 90%;
+		margin: 0 auto;
+	}
+	.kimenya-strain > div > p:nth-child(2) {
+		margin: 0 auto;
+		width: 90%;
+	}
+	.kimenya-button1, .kimenya-button2 {
+		width: 90%;
+		margin-top: 3%;
+	}
+	.kimenya-googlemap {
+		margin-top: 0;
+	}
+	.kimenya-contact-info {
+		width: 90%;
+	}
+	.kimenya-contact-button {
+		display: block;
+		width: 100%;
+		margin-bottom: 3%;
+	}
+	.kimenya-contact-button:last-child {
+		width: 100%;
+	}
+	.detail, .detail:nth-child(1),
+	.detail:nth-child(2),
+	.detail:last-child,
+	.menu-one-column-detail,
+	.menu-one-column-detail p:nth-child(2) {
+		font-size: 20px;
+		float: none;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+	}
+	.menu-one-column-detail {
+		margin-bottom: 18%;
+	}
+	.menu-one-column-detail .one-column-detail p:first-child,
+	.menu-one-column-detail .one-column-detail p:last-child {
+		float: none;
+	}
+	.menu-details,
+	.menu-one-column-detail {
+		width: 90%;
+		margin: 6% auto;
+	}
+	.menu .main-header {
+		padding: 0 4%;
+	}
+	.menu-headline-seal {
+		position: static;
+		margin: 0 auto 5%;
+		width: 33%;
+	}
+	.kimenya-brand-bottom {
+		width: 45%;
+		margin: 5% auto;
+	}
+	.widget-area ul li {
+		margin: 0 2.9%;
+		font-size: 0.9em;
+	}
+	.recruit-statement h1 {
+		font-size: 1.5em;
+	}
+	.access-kimenya-contact {
+		line-height: normal;
+		margin-bottom: 2%;
+	}
+	.access-kimenya-contact p:first-child, .access-kimenya-contact p:last-child {
+		font-size: 1em;
+	}
+	.access-kimenya-contact p:nth-child(2) {
+		font-size: 1.8em;
+	}
+	.access-kimenya {
+		width: 60%;
+		margin: 0 auto;
 	}
 }
 
 @media screen and (max-width: 375px) {
 	.kimenya-youtube {
 		width: 60%;
-		margin-bottom: 8%;
 	}
 	.kimenya-top p {
 		padding: 5%;
@@ -485,18 +636,14 @@ div:nth-child(2) > div.menu-headline {
 	.kimenya-news-header,
 	.kimenya-news-box,
 	.kimenya-check-box {
-		width: 90%;
+		width: 94%;
 	}
 	.kimenya-strain {
 		background-size: 352% 100%;
 		margin: 0;
 	}
-	.kimenya-youtube {
-		position: static;
-		margin: 0 auto;
-	}
 	.kimenya-button1, .kimenya-button2 {
-		width: 100%;
+		width: 94%;
 	}
 	.kimenya-contact-info {
 		width: 95%;
@@ -524,7 +671,7 @@ div:nth-child(2) > div.menu-headline {
 		margin: 0 auto;
 	}
 	.menu-one-column-detail {
-		margin-bottom: 18%;
+		margin-bottom: 7%;
 	}
 	.menu-one-column-detail .one-column-detail p:first-child,
 	.menu-one-column-detail .one-column-detail p:last-child {
@@ -532,7 +679,7 @@ div:nth-child(2) > div.menu-headline {
 	}
 	.menu-details,
 	.menu-one-column-detail {
-		width: 82%;
+		width: 90%;
 	}
 	.menu .main-header {
 		padding: 0 4%;
@@ -541,5 +688,22 @@ div:nth-child(2) > div.menu-headline {
 		position: static;
 		margin: 0 auto 5%;
 		width: 33%;
+	}
+	.kimenya-strain-right {
+		margin: 0 auto;
+		width: 94%;
+	}
+	.kimenya-strain > div > p:nth-child(2) {
+		margin: 0px auto;
+		width: 96%;
+	}
+}
+@media screen and (max-width: 320px) {
+	.kimenya-top p {
+		padding: 4%;
+		font-size: 0.8em;
+	}
+	.menu-details, .menu-one-column-detail {
+		width: 92%;
 	}
 }
